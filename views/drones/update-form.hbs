@@ -1,1 +1,18 @@
 <h2>Update the drone</h2>
+<form action="/drones/create" method="POST">
+  <div class="form-group mt-3">
+    <label for="formGroupExampleInput">Name</label>
+    <input name="name" type="text" class="form-control" id="formGroupExampleInput" value={{this.name}}>
+  </div>
+  <div class="form-group mt-3">
+    <label for="formGroupExampleInput2">Propellers</label>
+    <input name="propellers" type="text" class="form-control" id="formGroupExampleInput2" value={{this.propellers}}>
+  </div>
+  <div class="form-group mt-3">
+    <label for="formGroupExampleInput3">Max Speed</label>
+    <input name="maxSpeed" type="text" class="form-control" id="formGroupExampleInput3" value={{this.maxSpeed}}>
+  </div>
+  <div>
+  <input class="btn btn-success mt-3" type="submit" value="Add New Drone"/>
+  </div>
+</form>

@@ -4,14 +4,17 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">
-          {{this.name}}
+         Name: {{this.name}}
         </h5>
-        <p class='card-text'>
-        {{this.propellers}}
-      </p>
-        <p class='card-text'>
-        {{this.maxSpeed}}
-      </p>
+        <p class="card-text">
+          Propellers: {{this.propellers}}
+        </p>
+        <p class="card-text">
+         MaxSpeed: {{this.maxSpeed}}
+        </p>
+      </div>
+      <div>
+        <a class="btn btn-warning mt-3" href="/drones/{{this.id}}/edit">Edit</a>
       </div>
     </div>
   </div>
