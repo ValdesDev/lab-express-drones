@@ -12,13 +12,18 @@ router.get("/drones", async (req, res, next) => {
 });
 
 router.get("/drones/create", (req, res, next) => {
-  // Iteration #3: Add a new drone
-  // ... your code here
+  
+    res.render("drones/create-form")
+
 });
 
-router.post("/drones/create", (req, res, next) => {
-  // Iteration #3: Add a new drone
-  // ... your code here
+router.post("/drones/create", async (req, res, next) => {
+  try {
+    await Drone.create(req.body);
+    res.redirect("/drones");
+  } catch (err) {
+    console.log("err", err);
+  }
 });
 
 router.get("/drones/:id/edit", (req, res, next) => {
